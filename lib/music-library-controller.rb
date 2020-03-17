@@ -49,7 +49,7 @@ class MusicLibraryController
   end
 
   def list_artists
-    puts "Enter artist"
+     "Enter artist"
     specific_artist = gets.chomp
     if Artist.find_by_name(specific_artist) != nil
       Artist.find_by_name(specific_artist).songs.each {|song| puts "#{song.artist.name} - #{song.name} - #{song.genre.name}"}
