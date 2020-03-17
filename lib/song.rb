@@ -49,12 +49,17 @@ attr_accessor :name
     end
   end
 
-  def self.find_by_name(song)
-    self.all.detect { |s| s.name == song }
+  def self.find_by_name(name)
+    all.detect {|song| song.name == name}
   end
 
   def self.find_or_create_by_name(song)
-    find_by_name(song) || create(song)
+      # if self.find_by_name(name)
+      #   self.find_by_name(name)
+      # else
+      #  song = self.create(name)
+      # end
+      self.find_by_name(song) || self.create(song)
   end
 
 end
