@@ -10,7 +10,7 @@ attr_accessor :name
     self.artist=artist if artist
     self.genre=genre if genre
     # @genre = genre
-    save
+    # save
   end
 
   def save
