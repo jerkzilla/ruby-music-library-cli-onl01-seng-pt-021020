@@ -48,9 +48,14 @@ class MusicLibraryController
 
   end
 
-  def list_artists
-    artists = Artist.all.sort {|a,b| a.name <=> b.name}
-    artists.each.with_index(1) {|artist, i| puts "#{i}. #{artist.name}"}
+  def list_artist
+    puts "Enter artist"
+    specific_artist = gets.chomp
+    if Artist.find_by_name(specific_artist) != nil
+      Artist.find_by_name(specific_artist).songs.each {|song| puts "#{song.artist.name} - #{song.name} - #{song.genre.name}"}
+    else
+      puts "Artist does not exist"
+    end
   end
 
   def list_genres
