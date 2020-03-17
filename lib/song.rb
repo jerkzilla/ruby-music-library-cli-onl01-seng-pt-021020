@@ -40,4 +40,10 @@ attr_accessor :name
   def genre
     @genre
   end
+
+  def genre=(genre)
+    @genre = genre
+  end
+
+
 end
