@@ -46,8 +46,12 @@ attr_accessor :name
     @genre = genre
     if !(genre.songs.include?(self))
     genre.songs << self
+    end
   end
-end
+
+  def find_by_name(name)
+    all.detect {|song| song.name} == name
+  end
 
 
 end
