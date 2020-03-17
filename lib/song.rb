@@ -62,6 +62,7 @@ attr_accessor :name
       #  song = self.create(name)
       # end
       self.find_by_name(song) || self.create(song)
+      binding.pry
   end
 
 end
