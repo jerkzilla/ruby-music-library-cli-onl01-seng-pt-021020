@@ -19,14 +19,16 @@ class Genre
        genre
      end
 
-
-
     def self.all
       @@all
     end
 
     def self.destroy_all
       @@all.clear
+    end
+
+    def songs
+      @songs
     end
 
 
