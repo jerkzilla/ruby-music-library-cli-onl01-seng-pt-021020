@@ -59,7 +59,7 @@ attr_accessor :name
       # else
       #   self.create(name)
       # end
-      find_by_name(name) || create(name)
+      self.find_by_name(name) || self.create(name)
   end
 
 end
