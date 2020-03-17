@@ -49,7 +49,7 @@ attr_accessor :name
     end
   end
 
-  def find_by_name(name)
+  def self.find_by_name(name)
     all.detect {|song| song.name} == name
   end
 
