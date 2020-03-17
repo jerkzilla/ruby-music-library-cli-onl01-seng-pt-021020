@@ -1,3 +1,5 @@
+
+require 'pry'
 class Song
 attr_accessor :name
 
@@ -59,7 +61,7 @@ attr_accessor :name
       # else
       #  song = self.create(name)
       # end
-      self.find_by_name(song).uniq! || self.create(song)
+      self.find_by_name(song) || self.create(song)
   end
 
 end
