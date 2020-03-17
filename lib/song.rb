@@ -65,4 +65,7 @@ attr_accessor :name
        #binding.pry
   end
 
+  def self.new_from_filename(file)
+    file = Song.new
+  end
 end
