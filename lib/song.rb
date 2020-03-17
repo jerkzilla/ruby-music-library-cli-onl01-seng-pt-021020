@@ -54,11 +54,13 @@ attr_accessor :name
   end
 
   def self.find_or_create_by_name(name)
-      if self.find_by_name(name)
-        self.find_by_name(name).uniq
+    if all.include?(self)
+      self.find_by_name(name)
+      # if self.find_by_name(name)
+      #   self.find_by_name(name)
       else
        song = self.create(name)
-      end
+      # end
       # self.find_by_name(name) || self.create(name)
   end
 
