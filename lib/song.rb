@@ -6,7 +6,7 @@ attr_accessor :name
   def initialize(name, artist = nil, genre = nil)
     @name = name
     self.artist=artist if artist
-    @genre = genre 
+    @genre = genre
     save
   end
 
@@ -37,7 +37,7 @@ attr_accessor :name
     artist.add_song(self)
   end
 
-  def genre 
-    @genre 
+  def genre
+    @genre
   end
 end
