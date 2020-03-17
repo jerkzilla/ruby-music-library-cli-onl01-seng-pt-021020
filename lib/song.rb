@@ -43,7 +43,7 @@ attr_accessor :name
 
   def genre=(genre)
     @genre = genre
-    genre.songs << self if genre.songs.include?(genre)
+    genre.songs << self if !genre.songs.include?(genre)
   end
 
 
