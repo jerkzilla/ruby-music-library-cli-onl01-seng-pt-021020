@@ -48,7 +48,7 @@ class MusicLibraryController
 
   end
 
-  def list_artist
+  def list_artists
     puts "Enter artist"
     specific_artist = gets.chomp
     if Artist.find_by_name(specific_artist) != nil
