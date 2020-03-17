@@ -5,7 +5,7 @@ attr_accessor :name
 
   def initialize(name, artist = nil)
     @name = name
-    @artist = artist
+    self.artist=artist if artist
     save
   end
 
